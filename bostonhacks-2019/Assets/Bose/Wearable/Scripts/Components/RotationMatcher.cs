@@ -1,4 +1,4 @@
-﻿using Bose.Wearable.Extensions;
+﻿ using Bose.Wearable.Extensions;
 using UnityEngine;
 
 namespace Bose.Wearable
