@@ -5,12 +5,13 @@ using UnityEngine.Events;
 
 namespace Bose.Wearable
 {
-	/// <summary>
-	/// Automatically fires an event if the selected gesture is detected.
-	/// </summary>
-	[AddComponentMenu("Bose/Wearable/GestureDetector")]
+    /// <summary>
+    /// Automatically fires an event if the selected gesture is detected.
+    /// </summary>
+    [AddComponentMenu("Bose/Wearable/GestureDetector")]
 	public class GestureDetector : MonoBehaviour
 	{
+        //public GameObject cube = GameObject.Find("Cube");
 		/// <summary>
 		/// The gesture that will be detected.
 		/// </summary>
@@ -85,7 +86,7 @@ namespace Bose.Wearable
 
 			_onGestureDetected.Invoke();
             Debug.Log("hoy");
-            
+            //cube.GetComponent<AudioSource>().Play();
 		}
 	}
 }
