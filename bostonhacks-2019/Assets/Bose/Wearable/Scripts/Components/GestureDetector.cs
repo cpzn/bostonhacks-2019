@@ -84,6 +84,8 @@ namespace Bose.Wearable
 			}
 
 			_onGestureDetected.Invoke();
+            Debug.Log("hoy");
+            
 		}
 	}
 }
