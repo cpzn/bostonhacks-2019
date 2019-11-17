@@ -10,26 +10,25 @@ public class PillSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        input = "red pill";
     }
 
     // Update is called once per frame
     void Update()
     {
-        pill.AddComponent<PillStats>();
         if (input.Equals("blue capsule"))
         {
             //TODO: THIS IS HARDCODED.
-            pill.GetComponent<PillStats>().mesh = AssetDatabase.LoadAssetAtPath<Mesh>("Assets/Models/blue_pill.fbx");
-            pill.GetComponent<PillStats>().location = "bedroom";
-            pill.GetComponent<PillStats>().audio = "Take one blue capsule.";
+            GameObject bpill = pill.transform.GetChild(0).gameObject;
+            bpill.SetActive(true);
+            //pill.GetComponent<PillStats>().audio = "Take one blue capsule.";
         }
         if (input.Equals("red pill"))
         {
-            pill.GetComponent<PillStats>().mesh = AssetDatabase.LoadAssetAtPath<Mesh>("Assets/Models/red_pill.fbx");
-            pill.GetComponent<PillStats>().location = "bedroom";
-            pill.GetComponent<PillStats>().audio = "Take two red capsules.";
+            GameObject rpill = pill.transform.GetChild(1).gameObject;
+            rpill.SetActive(true);
+            //pill.GetComponent<PillStats>().audio = "Take two red capsules.";
         }
-
         input = null;
     }
 }

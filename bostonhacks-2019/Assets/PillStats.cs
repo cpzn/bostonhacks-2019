@@ -5,5 +5,5 @@ public class PillStats : MonoBehaviour
 {
     public Mesh mesh;
     public string location;
-    public string audio;
+    //public string audio;
 }

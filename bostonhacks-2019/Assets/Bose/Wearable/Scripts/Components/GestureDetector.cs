@@ -9,9 +9,8 @@ namespace Bose.Wearable
     /// Automatically fires an event if the selected gesture is detected.
     /// </summary>
     [AddComponentMenu("Bose/Wearable/GestureDetector")]
-	public class GestureDetector : MonoBehaviour
-	{
-        //public GameObject cube = GameObject.Find("Cube");
+    public class GestureDetector : MonoBehaviour
+    {
 		/// <summary>
 		/// The gesture that will be detected.
 		/// </summary>
@@ -51,11 +50,11 @@ namespace Bose.Wearable
 
 		private void Awake()
 		{
-			_wearableControl = WearableControl.Instance;
+            _wearableControl = WearableControl.Instance;
 
 			// Establish a requirement for the referenced gesture.
 			_requirement = gameObject.AddComponent<WearableRequirement>();
-		}
+        }
 
 		private void OnEnable()
 		{
