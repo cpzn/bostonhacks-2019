@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
 
+using WebApplication1;
+
 namespace Bose.Wearable
 {
     /// <summary>
@@ -86,6 +88,9 @@ namespace Bose.Wearable
 
 			_onGestureDetected.Invoke();
             Debug.Log("hoy");
+            var x = new WebApplication1.TextMe();
+
+
             //cube.GetComponent<AudioSource>().Play();
 		}
 	}
