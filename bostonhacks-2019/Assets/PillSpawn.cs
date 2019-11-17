@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class PillSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //TODO: THIS IS HARDCODED.
         input = "red pill";
     }
 
@@ -18,7 +20,6 @@ public class PillSpawn : MonoBehaviour
     {
         if (input.Equals("blue capsule"))
         {
-            //TODO: THIS IS HARDCODED.
             GameObject bpill = pill.transform.GetChild(0).gameObject;
             bpill.SetActive(true);
             //pill.GetComponent<PillStats>().audio = "Take one blue capsule.";
