@@ -16,13 +16,13 @@ public class PillStats : MonoBehaviour
         if (roll == 1)
         {
             name = "blue capsule";
-            location = camera.transform.position + new Vector3(1, 5, 45);
+            location = camera.transform.position + new Vector3(1, 5, 30);
             transform.position = location;
         }
         if (roll == 2)
         {
             name = "red pill";
-            location = camera.transform.position + new Vector3(4, 5, 45);
+            location = camera.transform.position + new Vector3(4, 5, 30);
             transform.position = location;
         }
     }
@@ -33,5 +33,11 @@ public class PillStats : MonoBehaviour
     public void SetAudioTwo()
     {
         audios.clip = Resources.Load<AudioClip>("glitter");
+    }
+    public void activatePill(){
+        pill.GetComponent<MeshRenderer>().enabled = true;
+    }
+    public void deletePill(){
+        pill.GetComponent<MeshRenderer>().enabled = false;
     }
 }
