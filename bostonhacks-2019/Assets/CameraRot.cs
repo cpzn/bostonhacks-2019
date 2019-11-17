@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraRot : MonoBehaviour
 {
@@ -15,5 +16,15 @@ public class CameraRot : MonoBehaviour
     void Update()
     {
         transform.rotation = frames.transform.rotation;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

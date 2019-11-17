@@ -12,7 +12,6 @@ public class PillSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pill.AddComponent<PillStats>();
         pstat = pill.GetComponent<PillStats>();
     }
 
